@@ -7,7 +7,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         # Delete all users except the admin
-        user_to_keep = CustomUser.objects.get(phone_number='8707360163')
+        user_to_keep = CustomUser.objects.get(phone_number='1234567890')
         users_to_delete = CustomUser.objects.exclude(id=user_to_keep.id)
         users_to_delete.delete()
 
